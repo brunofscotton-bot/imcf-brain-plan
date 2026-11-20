@@ -647,6 +647,8 @@ table{border-collapse:collapse;width:100%}
 .era .layer{grid-template-columns:52px 230px 1fr 96px;padding:10px 14px;gap:12px}
 .era .layer b.n{font-size:28px}
 .era .layer p{font-size:12.5px;line-height:1.35}
+.arch .abox b{display:flex;align-items:center;justify-content:space-between;gap:8px;white-space:nowrap}
+.arch .abox .pill{font-size:10px;padding:2px 7px;margin-left:0 !important}
 </style>
 </head>
 <body>
@@ -741,29 +743,37 @@ table{border-collapse:collapse;width:100%}
 
 <!-- 5b LESSON -->
 <section class="slide" data-sec="The brain">
-  <div class="top"><span>The new era · The Sports Model</span><nav></nav></div>
-  <h2>From a CRM to a brain that calls the next play</h2>
-  <p class="lede">The hardest part of the AI era isn't the technology. <mark>It's letting go of yesterday's assumptions.</mark> Inter Miami already runs on Salesforce; the brain turns that into action.</p>
-  <div class="body"><div class="era">
-    <div class="col"><h5>What changes</h5>
-      <div class="sh"><span class="t">Customer record</span><span class="a">→</span><span class="r">Living fan intelligence</span></div>
-      <div class="sh"><span class="t">Single "best" channel</span><span class="a">→</span><span class="r">Dynamic best channel per fan</span></div>
-      <div class="sh"><span class="t">Rule-based segments</span><span class="a">→</span><span class="r">AI reasoning and lookalikes</span></div>
-      <div class="sh"><span class="t">Heavy integration effort</span><span class="a">→</span><span class="r">Seamless connectivity</span></div>
-      <div class="sh"><span class="t">High human dependency</span><span class="a">→</span><span class="r">AI-assisted decisions</span></div>
-      <div class="quote">From database averages <em>to self + peers</em></div>
+  <div class="top"><span>The new era · The reference architecture</span><nav></nav></div>
+  <h2>Data Cloud is the brain. Everything else is a sense or a muscle.</h2>
+  <p class="lede">The hardest part of the AI era isn't the technology. <mark>It's letting go of yesterday's assumptions.</mark> Every source lands once, becomes one fan, gets scored, and is activated on any channel by the teams themselves.</p>
+  <div class="body"><div class="arch">
+    <div><div class="colh">L1 · Sources</div><div class="src">
+      <div class="sbox"><b>Ticketmaster</b><span>Tickets, STM plan, STM payments, attendance, ticket activity, buyer and holder, third market, events</span></div>
+      <div class="sbox"><b>Salesforce CRM</b><span>Customer, forms, leads, opportunities, tasks, touchpoints, rep SMS and WhatsApp</span></div>
+      <div class="sbox"><b>MLS Fan Genome</b><span>Merch customer and orders, affinities, preferences, indices</span></div>
+      <div class="sbox"><b>Marketing Cloud Advanced</b><span>Email, SMS and WhatsApp engagement</span></div>
+      <div class="sbox"><b>Data warehouse</b><span>Fan surveys</span></div>
+      <div class="sbox"><b>ZoomInfo</b><span>Campaign members (B2B)</span></div>
+    </div></div>
+    <div class="flow">→</div>
+    <div class="brain">
+      <div class="bt"><h3>Salesforce Data Cloud · <em>the brain</em></h3><span class="pill p-ok" style="background:#DDF5E6;color:#1E7B3C">Ready</span></div>
+      <div class="bl"><code>L2</code><div><b>Ingest and unify</b><span>Identity resolution: about 5M source records matched into 1.2M fan profiles.</span></div></div>
+      <div class="bl"><code>L3</code><div><b>Transform · Cogny Sport Data Model</b><span>One sports-native shape every layer above builds on.</span><div class="tags"><i>Ticket</i><i>STM</i><i>Merchandise</i><i>Email · SMS · WhatsApp engagement</i><i>Preferences</i></div></div></div>
+      <div class="bl core"><code>L4</code><div><b>Cogny Intelligence: indices and AI model</b><span>Conversion score for attack, upgrade and engagement for midfield, churn and renew for defense. The highest score decides the play for each fan, every day.</span></div></div>
+      <div class="bl"><code>L5</code><div><b>Rules and segments, owned by Ticket Operation</b><span>Directors set goal, audience, channels and touch caps. No code, no list, refreshed automatically.</span></div></div>
     </div>
-    <div class="col"><h5>How Cogny builds it on Salesforce, and where the club is today</h5>
-      <div class="layers">
-    <div class="layer act"><b class="n">05</b><h4>Track results<small>Results dashboard · CRO and Ticket Operation</small></h4><p>Every campaign, renewal and dollar, live for the CRO and Ticket Operation.</p><div class="st"><span class="pill p-mute">Planned</span></div></div>
-    <div class="layer act"><b class="n">04</b><h4>Engage<small>Marketing Cloud, SMS, WhatsApp, social</small></h4><p>Email only today. SMS and WhatsApp licensed, not live yet.</p><div class="st"><span class="pill p-warn">Partial</span></div></div>
-    <div class="layer act"><b class="n">03</b><h4>Automate<small>Lifecycle Studio and Agentforce</small></h4><p>Lifecycle Studio MVP running. Agentforce seats paid, not used yet.</p><div class="st"><span class="pill p-warn">Starting</span></div></div>
-    <div class="layer live"><b class="n">02</b><h4>Live Fan 360 view<small>Lifecycle Studio · Ticket Connector · CRM</small></h4><p>Reps work every fan with Ticketmaster data through the Cogny Ticket Connector.</p><div class="st"><span class="pill p-ok">Live</span></div></div>
-    <div class="layer act" style="border-left-color:var(--rose);background:var(--soft)"><b class="n">01</b><h4>The foundation: connect, predict, learn<small>Cogny Sport Data Model + Data Cloud + Cogny Intelligence</small></h4><p>About 5M records into 1.2M fans, scored every day, learning from every outcome.</p><div class="st"><span class="pill p-ok">Ready</span></div></div>
-  </div>
-    </div>
+    <div class="flow">→</div>
+    <div><div class="colh">L6 · Activation</div><div class="act">
+      <div class="abox"><b>Lifecycle Studio + Agentforce <span class="pill p-warn" style="margin-left:6px;vertical-align:1px">Starting</span></b><span>SDR, Renew, Concierge, Churn and sales agents</span></div>
+      <div class="abox"><b>Marketing Cloud Advanced <span class="pill p-warn" style="margin-left:6px;vertical-align:1px">Partial</span></b><span>Journeys on email, SMS, WhatsApp and app push</span></div>
+      <div class="abox"><b>Social media <span class="pill p-mute" style="margin-left:6px;vertical-align:1px">Planned</span></b><span>Meta, Google and TikTok audiences, refreshed automatically</span></div>
+      <div class="abox"><b>Sales and service <span class="pill p-ok" style="margin-left:6px;vertical-align:1px">Live</span></b><span>Fan 360, Cogny App, commissions, Digital Engagement</span></div>
+      <div class="abox"><b>Miami Miles <span class="pill p-mute" style="margin-left:6px;vertical-align:1px">Planned</span></b><span>Loyalty earned on every interaction</span></div>
+      <div class="abox"><b>Results dashboards <span class="pill p-mute" style="margin-left:6px;vertical-align:1px">Planned</span></b><span>Every campaign, live</span></div>
+    </div></div>
   </div></div>
-  <div class="foot"><div class="brand"><span class="lg"><img src="logos/mia.png" alt="Inter Miami CF"><i class="sp"></i><img class="sf" src="logos/salesforce.png" alt="Salesforce"><i class="sp"></i><img class="cg" src="logos/cogny-dark.svg" alt="Cogny"></span><i>Source: Inter Miami org review and Salesforce contract review, 2026</i></div><div class="pager"></div></div>
+  <div class="foot"><div class="brand"><span class="lg"><img src="logos/mia.png" alt="Inter Miami CF"><i class="sp"></i><img class="sf" src="logos/salesforce.png" alt="Salesforce"><i class="sp"></i><img class="cg" src="logos/cogny-dark.svg" alt="Cogny"></span><i>Status today: Live, Ready, Starting, Partial or Planned · Source: Inter Miami org review and Salesforce contract review, 2026</i></div><div class="pager"></div></div>
 </section>
 
 <!-- 7 FILM -->
